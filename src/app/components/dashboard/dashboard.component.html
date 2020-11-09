@@ -1,0 +1,80 @@
+<!-- <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0">
+      <img class="brand-logo" src="" alt="Logo">
+    </a>
+  </nav> 
+  
+  Sidebar navigation -->
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Word-UDB</a>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"> <span routerLink="/editor">Acerca de</span></a>
+      </li>
+    </ul>
+    <a class="nav-link" href="#" (click)="authService.SignOut()" style="color: white;"><i class="fas fa-sign-out-alt mr-sm-2" ></i>Cerrar Sesión</a>
+  </div>
+</nav>
+    
+    
+   <!-- <div class="row">
+      <nav class="col-md-2 d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item nav justify-content-center">
+              <a class="nav-link active">
+                <i class="fas fa-user"></i>User Profile
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active">
+                <i class="fas fa-prescription"></i>Student
+              </a>
+            </li>
+             Calling SignOut() Api from AuthService 
+            <li class="nav-item">
+              <a class="nav-link" (click)="authService.SignOut()">
+                <i class="fas fa-sign-out-alt"></i>Log out
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    -->
+  
+      <!-- Main content -->
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <div class="inner-adjust ">
+  
+          <div class="pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Perfil del Usuario</h1>
+          </div>
+          <!-- Show user data when logged in -->
+          <div class="row align-items-right" *ngIf="authService.userData as user">
+            <div class="col-md-12">
+              <div class="media">
+                <img class="align-self-start mr-5 img-thumbnail rounded-circle" src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}"
+                  alt="{{user.displayName}}">
+                <div class="media-body">
+                  <h1>Bienvenido</h1>
+                  <p>Id del Usuario: <strong>{{user.uid}}</strong></p>
+                  <p>Email: <strong>{{user.email}}</strong></p>
+                  <p style="visibility: hidden">Email Verified: <strong>{{user.emailVerified}}</strong></p>
+                </div>
+            </div>
+    </div>
+    <div>
+      <div class="wrapper">
+        <div class="sidebar">
+          <ul>
+            <h3><a style="cursor: pointer;"><span class="redirect" routerLink="/editor">¿Desea crear un nuevo documento?</span></a></h3>
+            <!--<li><a href="Ayuda.html"><i class="fas fa-hands-helping"></i> Ayuda</a></li>-->
+
+          </ul>
+        </div>
+        </div>
+    </div>
+  </div>
+</div> 

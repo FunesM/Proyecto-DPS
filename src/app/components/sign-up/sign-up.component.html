@@ -1,0 +1,53 @@
+<div class="container py-3">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+
+          <div class="card rounded-0 text-center">
+            <div class="card-title">
+              <h3 class="mb-0">Registro</h3>
+            </div>
+            <div class="displayTable">
+    <div class="displayTableCell">
+  
+      <div class="authBlock">
+  
+        <div class="formGroup">
+          <input type="email" class="formControl" placeholder="dirección de correo electrónico" #userEmail required>
+        </div>
+
+        <br>
+  
+        <div class="formGroup">
+          <input type="password" class="formControl" placeholder="Contraseña" #userPwd required>
+        </div>
+  
+        <div class="formGroup">
+          <input type="button" class="btn btnPrimary" value="Registrese" (click)="authService.SignUp(userEmail.value, userPwd.value)" onmouseover="style='text-decoration: underline; cursor: pointer;'">
+        </div>
+  
+        <div class="formGroup">
+          <span class="or"><span class="orInner">Or</span></span>
+        </div>
+  
+        <!-- Continue with Google -->
+        <div class="formGroup">
+          <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+            <i class="fab fa-google-plus-g"></i>
+            <p onmouseover="style='text-decoration: underline; cursor: pointer;'">Continuar con Google</p>
+          </button>
+        </div>
+  
+      <div class="redirectToLogin">
+        <span>¿Ya tiene una cuenta? <span class="redirect" routerLink="/sign-in" onmouseover="style='text-decoration: underline; cursor: pointer;'">Inicie sesión</span></span>
+      </div>
+    </div>
+  
+  </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>

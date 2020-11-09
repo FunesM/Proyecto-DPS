@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>WORD UDB</title>
+
+
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="sidebar">
+			<a routerLink="/dashboard">
+			<h3 style="color: white;">Regresar</h3>
+			<br>
+			<h2><i class="fab fa-wordpress-simple"></i> </h2>
+			</a>
+			<h2>W</h2>
+			<h2>O</h2>
+			<h2>R</h2>
+			<h2>D</h2>
+			<h2>U</h2>
+			<h2>D</h2>
+			<h2>B</h2>
+			<br>
+			<p align="center" style="font-size: large;"><a style="color: gray;" routerLink="/acerca-de">Conoce más sobre este proyecto</a></p>
+		</div>
+		<div class="main_content">
+			<div class="button">
+				<h3 style="text-align: center;">Crea tu documento en WORD UDB</h3>
+			</div>
+			<div class="info">
+				<ckeditor 
+				[(ngModel)]="ckeditorContent">
+			  </ckeditor>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
